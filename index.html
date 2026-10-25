@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SIL | Deutschsprachiger Indie Pop aus Zürich</title>
+<meta name="description" content="SIL macht deutschsprachigen Indie Pop aus Zürich. Hör rein, spiel die Songs im Rhythmusspiel und kontaktiere SIL für Booking und Presse.">
+<link rel="canonical" href="https://www.DEINE-DOMAIN.ch/">
+<meta name="theme-color" content="#a9c2a4">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="music.musician">
+<meta property="og:title" content="SIL | Deutschsprachiger Indie Pop aus Zürich">
+<meta property="og:description" content="SIL macht deutschsprachigen Indie Pop aus Zürich. Hör rein, spiel die Songs im Rhythmusspiel und kontaktiere SIL für Booking und Presse.">
+<meta property="og:image" content="https://www.DEINE-DOMAIN.ch/img/og.jpg">
+<meta property="og:url" content="https://www.DEINE-DOMAIN.ch/">
+<meta property="og:locale" content="de_CH">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MusicGroup", "name": "SIL", "genre": "Deutschsprachiger Indie Pop", "foundingLocation": "Zürich, Schweiz", "url": "https://www.DEINE-DOMAIN.ch/", "image": "https://www.DEINE-DOMAIN.ch/img/og.jpg", "email": "silmachtmusik@gmail.com", "sameAs": ["https://open.spotify.com/artist/7JsnrwuVcDwv2kqc0xOEuC", "https://www.instagram.com/silmachtmusik/", "https://www.tiktok.com/@silmachtmusik", "https://www.youtube.com/channel/UCwdP6VfmnRxEKypCEuDoFRw"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Figtree:wght@400;500;700&display=swap">
+<style>
+/* Layout: the facade from the press photos becomes the stage. Sage slats are the lanes, the cobalt shirt is the ground, the neon print is every note. */
+:root {
+  --lamelle: #a9c2a4;      /* sage facade slats */
+  --lamelle-tief: #8fab8a;
+  --kobalt: #3a63c9;       /* the blue shirt */
+  --kobalt-tief: #2a4ca3;
+  --leucht: #dcf55c;       /* neon print */
+  --tinte: #16244a;        /* deep navy ink */
+  --kreide: #eff3ea;
+  --bg: var(--lamelle);
+  --fg: var(--tinte);
+  --fg-soft: #2f4068;
+  --line: rgba(22, 36, 74, .22);
+  --stage: var(--kobalt);
+  --stage-slat: #b7cdb2;
+  --btn-bg: var(--tinte);
+  --btn-fg: var(--kreide);
+  --focus: var(--tinte);
+  --display: "Big Shoulders Display", "Oswald", "Arial Narrow", Impact, sans-serif;
+  --body: "Figtree", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --step--1: .875rem; --step-0: 1.0625rem; --step-1: 1.375rem; --step-2: 2rem; --step-3: 3.25rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111c37; --fg: #e3ebde; --fg-soft: #b5c2b1; --line: rgba(227, 235, 222, .18);
+    --stage: #1d3577; --stage-slat: #5f7b5b; --btn-bg: var(--leucht); --btn-fg: #111c37; --focus: var(--leucht);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #111c37; --fg: #e3ebde; --fg-soft: #b5c2b1; --line: rgba(227, 235, 222, .18);
+  --stage: #1d3577; --stage-slat: #5f7b5b; --btn-bg: var(--leucht); --btn-fg: #111c37; --focus: var(--leucht);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--body); font-size: var(--step-0); line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap {
+  max-width: 1180px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: 1.5px; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 900; line-height: .9; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+
+/* Nav */
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 20px; }
+.nav-mark { font-family: var(--display); font-weight: 900; font-size: 1.75rem; text-decoration: none; letter-spacing: .02em; }
+.nav ul { display: flex; gap: clamp(14px, 3vw, 32px); list-style: none; margin: 0; padding: 0; font-weight: 500; }
+.nav ul a { text-decoration: none; }
+.nav ul a:hover { text-decoration: underline; }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(24px, 4vw, 56px); padding-block: 8px 72px; align-items: start; }
+.hero-text { display: flex; flex-direction: column; gap: 28px; min-width: 0; }
+.wordmark {
+  font-size: clamp(9rem, 24vw, 19rem); letter-spacing: -.01em; line-height: .78;
+  margin-left: -.04em;
+}
+.tagline { font-size: var(--step-1); line-height: 1.4; max-width: 30ch; font-weight: 500; }
+.how { color: var(--fg-soft); max-width: 44ch; }
+kbd {
+  font-family: var(--body); font-weight: 700; font-size: .85em;
+  border: 1.5px solid currentColor; border-radius: 5px; padding: 0 .4em; margin: 0 .1em;
+}
+
+.picker { display: flex; flex-direction: column; border-top: 2px solid var(--fg); }
+.picker legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.picker fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.pick {
+  display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 12px;
+  padding: 10px 4px; border-bottom: 1px solid var(--line); cursor: pointer;
+}
+.pick input { position: absolute; opacity: 0; pointer-events: none; }
+.pick-title { font-family: var(--display); font-weight: 700; font-size: 1.75rem; line-height: 1.05; }
+.pick-meta { font-size: var(--step--1); color: var(--fg-soft); font-variant-numeric: tabular-nums; }
+.pick:hover .pick-title { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .15em; }
+.pick:has(input:checked) { background: var(--fg); color: var(--bg); padding-inline: 12px; }
+.pick:has(input:checked) .pick-meta { color: inherit; opacity: .8; }
+.pick:has(input:focus-visible) { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+/* Stage */
+.stage-wrap { position: relative; min-width: 0; }
+.stage {
+  position: relative; height: clamp(420px, 68vh, 620px); border-radius: 18px; overflow: hidden;
+  background: var(--stage); touch-action: none; user-select: none; -webkit-user-select: none;
+}
+.stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.hud {
+  position: absolute; top: 14px; left: 16px; right: 16px; display: flex; justify-content: space-between; align-items: center;
+  color: var(--kreide); font-variant-numeric: tabular-nums; font-weight: 700; pointer-events: none; z-index: 2;
+}
+.hud-score { font-family: var(--display); font-size: 2rem; line-height: 1; }
+.hud-right { display: flex; gap: 10px; align-items: center; pointer-events: auto; }
+.icon-btn {
+  appearance: none; border: 0; background: rgba(239, 243, 234, .16); color: var(--kreide);
+  width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; cursor: pointer;
+}
+.icon-btn:hover { background: rgba(239, 243, 234, .28); }
+.icon-btn svg { width: 18px; height: 18px; fill: currentColor; }
+.progress { position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: rgba(239, 243, 234, .15); z-index: 2; }
+.progress span { display: block; height: 100%; width: 0; background: var(--leucht); }
+
+.panel {
+  position: absolute; inset: 0; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 18px; text-align: center; padding: 24px; color: var(--kreide);
+  background: linear-gradient(180deg, rgba(22, 36, 74, .15), rgba(22, 36, 74, .62));
+}
+.panel h2 { font-size: clamp(3rem, 7vw, 4.5rem); color: var(--kreide); }
+.panel p { max-width: 34ch; }
+.play-btn {
+  appearance: none; border: 0; cursor: pointer; font: inherit; font-weight: 700; font-size: 1.125rem;
+  background: var(--leucht); color: var(--tinte); padding: 16px 34px; border-radius: 999px;
+  display: inline-flex; align-items: center; gap: 10px; transition: transform .12s ease;
+}
+.play-btn:hover { transform: scale(1.04); }
+.play-btn:active { transform: scale(.98); }
+.play-btn svg { width: 18px; height: 18px; fill: currentColor; }
+.play-btn[disabled] { opacity: .7; cursor: progress; transform: none; }
+.panel :focus-visible { outline-color: var(--leucht); }
+.modes { display: inline-flex; border-radius: 999px; background: rgba(239, 243, 234, .14); padding: 4px; }
+.modes label { cursor: pointer; }
+.modes input { position: absolute; opacity: 0; pointer-events: none; }
+.modes span { display: block; padding: 6px 16px; border-radius: 999px; font-weight: 500; font-size: var(--step--1); }
+.modes input:checked + span { background: var(--kreide); color: var(--tinte); }
+.modes input:focus-visible + span { outline: 3px solid var(--leucht); outline-offset: 2px; }
+.best { font-size: var(--step--1); opacity: .85; font-variant-numeric: tabular-nums; }
+.results { display: grid; grid-template-columns: repeat(3, auto); gap: 4px 28px; font-variant-numeric: tabular-nums; }
+.results dt { font-size: var(--step--1); opacity: .8; }
+.results dd { margin: 0; font-family: var(--display); font-weight: 900; font-size: 2.25rem; line-height: 1; grid-row: 2; }
+.panel-links { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+.ghost-btn {
+  appearance: none; cursor: pointer; font: inherit; font-weight: 700; color: var(--kreide); text-decoration: none;
+  border: 2px solid rgba(239, 243, 234, .7); background: transparent; padding: 12px 24px; border-radius: 999px;
+}
+.ghost-btn:hover { border-color: var(--kreide); background: rgba(239, 243, 234, .1); }
+.err { color: var(--leucht); font-weight: 500; }
+
+/* Sections */
+section.block { padding-block: 72px; border-top: 2px solid var(--fg); }
+.block-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 36px; flex-wrap: wrap; }
+.block-head h2 { font-size: clamp(3.5rem, 9vw, 6.5rem); }
+.block-head p { color: var(--fg-soft); max-width: 40ch; }
+
+.songs { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.song { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 12px 40px; padding-block: 28px; border-bottom: 1px solid var(--line); }
+.song:first-child { padding-top: 0; }
+.song h3 { font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: .95; }
+.song-body { display: flex; flex-direction: column; gap: 16px; min-width: 0; max-width: 62ch; }
+.song-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn {
+  appearance: none; border: 0; cursor: pointer; font: inherit; font-weight: 700; font-size: var(--step--1);
+  background: var(--btn-bg); color: var(--btn-fg); padding: 10px 18px; border-radius: 999px; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.btn svg { width: 14px; height: 14px; fill: currentColor; }
+.btn.line { background: transparent; color: var(--fg); box-shadow: inset 0 0 0 2px var(--fg); }
+.btn:hover { filter: brightness(1.12); }
+
+.about { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(28px, 5vw, 64px); align-items: start; }
+.about figure { margin: 0; }
+.about img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 18px; display: block; max-width: 100%; }
+.about figcaption { font-size: var(--step--1); color: var(--fg-soft); margin-top: 10px; }
+.about-text { display: flex; flex-direction: column; gap: 20px; max-width: 62ch; min-width: 0; }
+.about-text .lead { font-size: var(--step-1); line-height: 1.45; font-weight: 500; }
+.facts { display: grid; grid-template-columns: max-content 1fr; gap: 10px 24px; margin: 8px 0 0; padding-top: 20px; border-top: 1px solid var(--line); }
+.facts dt { color: var(--fg-soft); }
+.facts dd { margin: 0; font-weight: 500; }
+
+.contact { display: grid; gap: 28px; }
+.mail-row { display: flex; align-items: center; gap: 14px 20px; flex-wrap: wrap; }
+.mail {
+  font-family: var(--display); font-weight: 900; font-size: clamp(2.25rem, 7.5vw, 5.5rem); line-height: 1;
+  text-decoration: none; overflow-wrap: anywhere; user-select: all;
+}
+.mail:hover { text-decoration: underline; text-decoration-thickness: 4px; }
+.socials { display: flex; gap: 10px 28px; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; font-size: var(--step-1); font-weight: 500; }
+.socials a { text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
+.socials a:hover { text-decoration: underline; }
+.socials svg { width: 22px; height: 22px; fill: currentColor; }
+
+footer { border-top: 2px solid var(--fg); padding-block: 28px 40px; font-size: var(--step--1); color: var(--fg-soft); }
+.foot { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer details { margin-top: 18px; max-width: 70ch; }
+footer summary { cursor: pointer; font-weight: 700; color: var(--fg); }
+footer details div { display: grid; gap: 10px; padding-top: 12px; }
+footer h3 { font-family: var(--body); font-size: var(--step-0); font-weight: 700; line-height: 1.3; color: var(--fg); }
+
+@media (max-width: 860px) {
+  .hero { grid-template-columns: minmax(0, 1fr); padding-bottom: 56px; gap: 24px; }
+  .hero-text { display: contents; }
+  .wordmark { order: 1; } .tagline { order: 2; } .stage-wrap { order: 3; } .how { order: 4; } .picker { order: 5; }
+  .wordmark { font-size: clamp(8rem, 42vw, 14rem); }
+  .song, .about { grid-template-columns: minmax(0, 1fr); }
+  .about figure { max-width: 420px; }
+  section.block { padding-block: 56px; }
+}
+@media (max-width: 520px) {
+  .nav ul { gap: 14px; font-size: var(--step--1); }
+  .stage { height: min(72vh, 540px); border-radius: 14px; }
+  .results { gap: 4px 18px; }
+  .results dd { font-size: 1.75rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .play-btn { transition: none; }
+}
+</style>
+<style>:root{padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<header class="wrap nav">
+  <a class="nav-mark" href="#top" aria-label="SIL, zum Seitenanfang">SIL</a>
+  <nav aria-label="Hauptnavigation">
+    <ul>
+      <li><a href="#spiel">Spiel</a></li>
+      <li><a href="#songs">Songs</a></li>
+      <li><a href="#ueber">Über SIL</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="wrap hero" id="spiel">
+    <div class="hero-text">
+      <h1 class="wordmark">SIL</h1>
+      <p class="tagline">Deutschsprachiger Indie Pop aus Zürich. Der Soundtrack für gute Tage, laute Nächte und alles dazwischen.</p>
+      <p class="how">Wähl einen Song und spiel mit. Triff die Noten, wenn sie die Linie erreichen: mit <kbd>D</kbd><kbd>F</kbd><kbd>J</kbd><kbd>K</kbd> oder per Tippen auf die Bahnen.</p>
+      <div class="picker">
+        <fieldset>
+          <legend>Song wählen</legend>
+          <div id="picker"></div>
+        </fieldset>
+      </div>
+    </div>
+
+    <div class="stage-wrap">
+      <div class="stage" id="stage">
+        <canvas id="canvas" aria-label="Rhythmusspiel: vier Bahnen, Noten fallen zur Linie unten" role="img"></canvas>
+        <div class="hud">
+          <div><div class="hud-score" id="score">0</div><div id="combo" aria-live="off">&nbsp;</div></div>
+          <div class="hud-right">
+            <button class="icon-btn" id="pauseBtn" type="button" aria-label="Pause" hidden>
+              <svg viewBox="0 0 24 24"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="progress"><span id="progress"></span></div>
+
+        <div class="panel" id="startPanel">
+          <h2 id="startTitle">babygirl</h2>
+          <div class="modes" role="radiogroup" aria-label="Schwierigkeit">
+            <label><input type="radio" name="mode" id="modeEasy" value="1"><span>Leicht</span></label>
+            <label><input type="radio" name="mode" id="modeNormal" value="2" checked><span>Normal</span></label>
+          </div>
+          <button class="play-btn" id="playBtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></svg><span>Spielen</span>
+          </button>
+          <p class="best" id="best"></p>
+          <p class="err" id="err" hidden></p>
+        </div>
+
+        <div class="panel" id="pausePanel" hidden>
+          <h2>Pause</h2>
+          <div class="panel-links">
+            <button class="play-btn" id="resumeBtn" type="button"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></svg><span>Weiter</span></button>
+            <button class="ghost-btn" id="quitBtn" type="button">Beenden</button>
+          </div>
+        </div>
+
+        <div class="panel" id="endPanel" hidden>
+          <h2 id="endTitle">Stark.</h2>
+          <dl class="results">
+            <dt>Punkte</dt><dd id="rScore">0</dd>
+            <dt>Treffer</dt><dd id="rAcc">0 %</dd>
+            <dt>Beste Combo</dt><dd id="rCombo">0</dd>
+          </dl>
+          <p class="best" id="rBest"></p>
+          <div class="panel-links">
+            <button class="play-btn" id="againBtn" type="button"><span>Nochmal spielen</span></button>
+            <a class="ghost-btn" href="https://open.spotify.com/artist/7JsnrwuVcDwv2kqc0xOEuC" target="_blank" rel="noopener">Auf Spotify hören</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="block" id="songs" aria-labelledby="songs-h">
+    <div class="wrap">
+      <div class="block-head">
+        <h2 id="songs-h">Songs</h2>
+        <p>Jeden Song kannst du oben im Spiel mitspielen.</p>
+      </div>
+      <ol class="songs" id="songList"></ol>
+    </div>
+  </section>
+
+  <section class="block" id="ueber" aria-labelledby="ueber-h">
+    <div class="wrap">
+      <div class="block-head"><h2 id="ueber-h">Über SIL</h2></div>
+      <div class="about">
+        <figure>
+          <img src="img/sil-portrait-2.jpg" width="1100" height="1375" alt="SIL im blauen T-Shirt vor einer grünen Lamellenfassade" loading="lazy">
+          <figcaption>Pressefotos auf Anfrage in voller Auflösung.</figcaption>
+        </figure>
+        <div class="about-text">
+          <p class="lead">SIL steht für deutschsprachigen Indie Pop mit catchy Melodien und positiven Vibes. Der Walliser Künstler lebt heute in Zürich und verbindet organische Indie-Elemente mit modernem Pop.</p>
+          <p>Seine musikalischen Wurzeln liegen in der Produktion. Angefangen hat er als Producer, zunächst im Rap und geprägt vom Samplen. 2018 veröffentlichte er unter dem Namen Mindboy seinen ersten eigenen Song „Bout You“, der heute bei über zwei Millionen Streams auf Spotify steht. Es folgten zahlreiche Singles und zwei EPs zwischen R&amp;B, melancholischen Sadboy-Vibes und modernem Pop.</p>
+          <p>2026 schlägt er als SIL ein neues Kapitel auf: deutschsprachig, direkter, leichter und mit deutlich mehr positiver Energie. Die Produktion bleibt dabei das Herzstück. Nur erzählt SIL seine Geschichten jetzt auf Deutsch.</p>
+          <dl class="facts">
+            <dt>Herkunft</dt><dd>Wallis, lebt in Zürich</dd>
+            <dt>Genre</dt><dd>Deutschsprachiger Indie Pop</dd>
+            <dt>Für Fans von</dt><dd>Zartmann, Frytz, Strob, Carlo5, Zuender</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="kontakt" aria-labelledby="kontakt-h">
+    <div class="wrap contact">
+      <div class="block-head"><h2 id="kontakt-h">Kontakt</h2><p>Booking, Presse, Kollaborationen oder einfach Hallo.</p></div>
+      <div class="mail-row">
+        <a class="mail" href="mailto:silmachtmusik@gmail.com" id="mail">silmachtmusik@gmail.com</a>
+        <button class="btn line" type="button" id="copyBtn">Adresse kopieren</button>
+      </div>
+      <ul class="socials">
+        <li><a href="https://open.spotify.com/artist/7JsnrwuVcDwv2kqc0xOEuC" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.6 14.4a.62.62 0 0 1-.86.2c-2.35-1.43-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.86zm1.23-2.73a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.57 11.23 1.33.37.22.48.7.26 1.07zm.1-2.85C14.7 8.9 9.38 8.73 6.3 9.66a.94.94 0 1 1-.54-1.8c3.53-1.07 9.4-.86 13.11 1.34a.94.94 0 0 1-.95 1.62z"/></svg>Spotify</a></li>
+        <li><a href="https://www.instagram.com/silmachtmusik/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6zm0 7.9a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2zm5-9.3a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2zM12 3.6c2.7 0 3 0 4.1.06 2.7.12 4 1.42 4.1 4.1.06 1.1.07 1.4.07 4.14s0 3.05-.07 4.13c-.12 2.68-1.4 3.98-4.1 4.1-1.1.05-1.4.06-4.1.06s-3.04 0-4.13-.06c-2.72-.12-3.98-1.43-4.1-4.1C3.7 15.05 3.6 14.74 3.6 12s.01-3.04.06-4.13c.12-2.68 1.4-3.98 4.1-4.1C8.97 3.62 9.3 3.6 12 3.6zM12 2c-2.72 0-3.06 0-4.12.06-3.63.17-5.65 2.18-5.82 5.82C2 8.94 2 9.28 2 12s.01 3.06.06 4.12c.17 3.63 2.18 5.65 5.82 5.82C8.94 22 9.28 22 12 22s3.06-.01 4.12-.06c3.63-.17 5.65-2.18 5.82-5.82.05-1.06.06-1.4.06-4.12s-.01-3.06-.06-4.12c-.16-3.63-2.18-5.65-5.82-5.82C15.06 2 14.72 2 12 2z"/></svg>Instagram</a></li>
+        <li><a href="https://www.tiktok.com/@silmachtmusik" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 2h-3.3v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6.04.86.12V9.24a6.2 6.2 0 1 0 5.34 6.16V8.6a7.6 7.6 0 0 0 4.4 1.4V6.7a4.4 4.4 0 0 1-4.4-4.4z"/></svg>TikTok</a></li>
+        <li><a href="https://www.youtube.com/channel/UCwdP6VfmnRxEKypCEuDoFRw" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.77-1.77C18.27 5 12 5 12 5s-6.27 0-7.83.43A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.77 1.77C5.73 19 12 19 12 19s6.27 0 7.83-.43a2.5 2.5 0 0 0 1.77-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3z"/></svg>YouTube</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot"><span>© 2026 SIL, Zürich</span><a href="#top">Nach oben</a></div>
+    <details id="rechtliches">
+      <summary>Impressum und Datenschutz</summary>
+      <div>
+        <h3>Impressum</h3>
+        <p>SIL, Zürich, Schweiz. Kontakt: silmachtmusik@gmail.com</p>
+        <h3>Datenschutz</h3>
+        <p>Diese Website setzt keine Cookies und verwendet kein Tracking zu Werbezwecken. Für anonyme Besucherstatistiken wird Cloudflare Web Analytics ohne Cookies eingesetzt. Beim Aufruf der Seite verarbeitet der Hosting-Anbieter Cloudflare technisch notwendige Daten wie die IP-Adresse. Schriften werden über Google Fonts geladen. Wenn du mir eine E-Mail schreibst, nutze ich deine Angaben nur, um zu antworten.</p>
+      </div>
+    </details>
+  </div>
+</footer>
+
+<script>
+const SONGS = [
+  { id: "babygirl", title: "babygirl", desc: "„babygirl“ erzählt von einem Jungen, der das schönste Mädchen der Stadt nicht mehr aus dem Kopf bekommt und um ihre Liebe kämpft: verliebt, aber trotzdem cool. Der deutschsprachige Indie-Pop-Lovesong lebt von warmen, funky Gitarren, laid-back Drums und smoothen Vocals. Ein moderner, urbaner Track zwischen Indie Pop und R&B." },
+  { id: "magdalena", title: "magdalena", desc: "„magdalena“ fängt den Moment ein, in dem sich in einer verrauchten Disco im Stil der 80er und 90er zwei Blicke treffen und alles andere verschwindet. Der melodische deutschsprachige Indie-Rock-Track verbindet treibende Gitarren mit Retro-Dance-Grooves und einer grossen, emotionalen Hook. Irgendwo zwischen BIBIZA und ENNIO, mit einem filmischen Nightlife-Vibe für Sunset-Drives, Underground-Clubs und nostalgische Nächte." },
+  { id: "egal-wo-du-grad-bist", title: "egal wo du grad bist", desc: "„egal wo du grad bist“ handelt von Vertrauen und Beständigkeit und zeigt eine Beziehung in all ihren Facetten. Der Indie-Rock-Track bedient sich bei Garage und Alternative Rock: Leicht verzerrte Gitarren sorgen für den klassischen Indie-Vibe. Ein ehrlicher Song über das, was bleibt, wenn alles andere in Bewegung ist." },
+  { id: "nie-vorbei", title: "nie vorbei", desc: "„nie vorbei“ klingt nach den ersten warmen Frühlingstagen, nach Autofahrten mit offenen Fenstern und Spaziergängen in der Sonne. Der deutschsprachige Indie-Pop-Track bewegt sich klanglich zwischen Antonius und KASI: emotional, leicht und trotzdem catchy. Ein Song, der gute Laune macht, ohne an Tiefe zu verlieren." },
+  { id: "wie-du-tanzt", title: "wie du tanzt", desc: "„wie du tanzt“ fängt den Moment ein, in dem eine Frau den Raum betritt und alle Blicke auf sich zieht. Im Zentrum steht ein Shiloh-Dynasty-Sample, beschleunigt und vom melancholischen Lo-Fi-Vibe in einen Indie-Pop-Banger verwandelt. Ein Ohrwurm, der sich vom ersten Hören an festsetzt." },
+  { id: "adidas-superstar", title: "adidas superstar", desc: "„adidas superstar“ erzählt von einer Liebe auf Distanz, die den Herbst endlos lang erscheinen lässt. Der deutschsprachige Indie-Track holt sich Einflüsse aus R&B und Rap: Punchy Drums, warme Harmonien und tiefe Bässe erzeugen eine leicht düstere, aber einladende Energie. Ein atmosphärischer Song mit emotionalem Text und kraftvollem Instrumental." }
+];
+const SPOTIFY = "https://open.spotify.com/artist/7JsnrwuVcDwv2kqc0xOEuC";
+const MAPS = {"adidas-superstar":{"bpm":80.7,"notes":[[1.834,3,2],[2.206,0,2],[2.577,0,2],[2.949,2,2],[3.692,0,2],[4.063,0,2],[4.435,3,2],[4.807,0,2],[5.178,0,2],[5.55,3,1],[5.921,0,2],[6.293,0,2],[7.407,2,2],[8.15,0,2],[8.522,0,2],[8.893,3,2],[9.636,0,2],[10.008,0,2],[10.751,3,2],[11.494,0,1],[12.237,0,2],[12.608,1,2],[14.095,0,2],[14.466,0,2],[14.838,1,2],[15.209,0,2],[15.952,0,1],[17.067,3,1],[18.181,3,1],[18.553,2,1],[18.924,3,1],[19.307,3,1],[19.691,0,1],[20.84,0,2],[21.223,3,1],[21.595,2,1],[21.966,2,1],[23.115,3,1],[23.499,3,1],[23.87,2,1],[24.242,2,1],[24.613,3,1],[24.985,3,2],[25.356,2,1],[25.728,1,2],[27.214,3,1],[27.585,3,1],[27.957,1,1],[28.328,2,2],[28.7,2,1],[29.06,3,2],[29.42,3,1],[29.791,2,1],[30.163,2,1],[30.534,3,1],[31.277,1,1],[31.649,2,2],[32.02,1,1],[33.135,2,1],[33.495,2,2],[33.855,3,1],[34.598,3,1],[36.084,1,2],[36.444,3,1],[36.804,3,1],[37.175,1,1],[37.918,2,1],[38.29,3,1],[38.65,3,2],[39.01,1,1],[39.381,3,2],[39.753,1,1],[40.124,2,2],[41.239,3,1],[41.61,2,2],[42.725,1,2],[43.468,0,1],[44.211,0,2],[44.582,3,2],[44.954,0,2],[45.325,0,2],[45.697,1,2],[46.44,2,1],[47.554,3,1],[47.926,1,1],[48.309,3,2],[48.692,3,1],[49.052,2,1],[49.412,1,1],[49.772,2,2],[50.132,2,1],[50.492,1,1],[50.852,3,1],[51.212,2,1],[51.572,1,1],[51.943,0,1],[52.686,1,1],[53.058,1,1],[53.429,2,1],[53.801,3,1],[54.161,2,1],[54.52,1,1],[54.88,3,1],[55.24,2,1],[55.6,2,1],[55.96,0,1],[56.703,3,1],[57.075,2,1],[57.446,2,1],[58.189,0,1],[58.561,1,1],[58.932,2,1],[59.304,3,2],[59.675,3,1],[60.442,2,1],[60.825,3,1],[61.208,3,1],[61.951,2,1],[62.694,3,1],[63.065,0,1],[63.437,2,2],[63.808,2,1],[64.18,3,1],[64.563,2,2],[64.946,2,1],[65.318,0,1],[65.689,1,1],[67.175,3,1],[67.558,3,1],[67.942,0,1],[68.708,1,1],[69.451,1,1],[70.194,2,1],[70.565,0,2],[70.937,2,1],[71.308,2,2],[71.68,3,1],[72.423,3,1],[72.783,2,1],[73.503,0,1],[73.863,2,2],[74.223,2,2],[74.582,3,1],[74.942,3,1],[75.302,2,1],[75.674,2,2],[76.045,3,2],[77.531,1,1],[77.903,1,2],[78.274,0,1],[79.018,1,2],[79.389,0,2],[80.132,1,2],[81.247,2,2],[81.618,2,1],[81.99,1,1],[82.733,3,1],[83.104,1,2],[83.476,3,1],[84.196,1,2],[84.915,3,1],[85.287,3,1],[85.658,2,2],[86.03,2,1],[86.773,0,2],[87.144,3,1],[87.516,3,1],[87.888,1,1],[88.259,2,2],[88.631,2,2],[89.002,0,2],[89.374,3,1],[90.117,0,2],[90.488,0,2],[91.231,3,1],[91.603,3,1],[91.974,1,1],[92.717,2,2],[93.46,3,1],[93.832,3,1],[94.203,2,1],[94.575,3,1],[95.318,2,1],[95.689,2,1],[96.432,0,1],[97.176,1,1],[97.93,1,1],[98.313,2,1],[98.696,3,1],[99.08,3,1],[99.823,1,1],[100.566,2,1],[100.949,1,1],[101.332,1,1],[101.703,3,2],[102.075,2,1],[102.818,3,1],[103.561,3,1],[103.933,1,2],[104.304,1,1],[105.419,3,1],[105.79,2,2],[106.533,1,2],[106.905,1,2],[107.648,3,2],[108.019,0,2],[108.391,1,2],[108.762,1,2],[109.134,0,2],[109.505,0,1],[109.877,3,2],[110.248,1,2],[110.62,0,2],[110.991,0,2],[111.363,1,1],[111.734,1,1],[112.106,0,2],[112.477,1,2],[112.849,1,2],[113.22,0,2],[113.592,1,2],[113.964,1,1],[114.707,3,2],[115.45,0,1],[116.564,2,1],[116.936,1,2],[117.679,1,2],[118.05,3,2],[118.422,1,2],[118.793,1,2],[119.165,0,2],[119.536,1,2],[119.908,1,2],[120.651,3,2],[121.394,0,2],[122.137,0,2],[122.508,1,2],[122.88,0,2],[123.623,0,1],[123.995,3,2],[124.366,0,2],[125.109,0,2],[125.481,1,1],[125.852,0,2],[126.224,0,2]],"duration":128.0},"babygirl":{"bpm":99.4,"notes":[[2.972,3,1],[3.553,0,2],[3.855,0,2],[4.156,3,1],[4.458,1,1],[5.062,3,1],[5.364,2,1],[5.666,1,2],[5.968,2,2],[6.269,2,2],[6.571,3,1],[6.861,2,2],[7.152,3,1],[8.359,1,1],[8.661,0,2],[8.963,3,1],[9.265,1,1],[9.868,1,2],[10.17,3,1],[10.461,2,1],[10.751,2,2],[11.053,3,1],[11.355,3,1],[11.958,2,2],[13.166,2,1],[13.468,1,2],[13.769,3,1],[14.071,1,2],[14.675,2,1],[14.977,3,1],[15.267,1,2],[15.557,1,2],[15.859,3,2],[16.161,3,1],[16.463,2,1],[16.765,0,2],[17.345,0,2],[17.949,1,1],[18.251,0,2],[18.553,0,2],[19.156,3,2],[19.76,0,2],[20.062,0,2],[20.364,2,2],[20.968,0,2],[21.571,2,1],[21.873,3,2],[22.175,3,1],[23.661,1,2],[23.963,0,2],[24.265,2,2],[24.567,2,1],[24.857,1,2],[25.147,2,1],[25.449,2,2],[25.751,3,1],[26.355,3,1],[27.562,0,1],[27.864,0,2],[28.166,3,1],[28.77,0,2],[29.071,3,2],[29.373,3,1],[29.675,1,2],[29.977,3,1],[30.279,1,2],[30.581,3,1],[31.184,2,2],[31.475,3,1],[31.765,3,1],[32.67,1,2],[32.972,3,1],[33.553,0,2],[33.855,3,2],[34.157,2,1],[34.76,2,1],[35.062,1,2],[35.364,2,1],[35.666,2,2],[36.548,0,1],[37.454,0,2],[37.756,3,2],[38.359,0,2],[38.963,0,1],[39.567,3,2],[39.869,0,2],[40.171,3,1],[40.774,1,2],[41.076,3,1],[41.378,2,1],[41.958,1,2],[42.26,1,2],[42.562,2,1],[42.864,0,2],[43.166,0,2],[43.468,1,2],[43.77,3,1],[44.071,1,2],[44.664,1,2],[44.954,3,1],[45.256,3,2],[45.558,1,2],[46.161,2,1],[46.765,0,2],[47.067,0,2],[47.369,3,1],[47.671,0,2],[48.274,1,2],[48.576,3,1],[49.784,2,1],[50.074,3,2],[50.364,1,2],[50.968,2,1],[51.572,0,2],[51.873,0,2],[52.175,3,1],[53.058,1,2],[53.359,2,1],[53.661,1,2],[53.963,1,2],[54.265,2,2],[54.567,2,1],[55.171,1,1],[55.751,0,2],[56.355,1,1],[56.657,1,2],[56.959,2,2],[57.562,0,2],[58.166,0,1],[58.468,1,2],[58.77,0,2],[59.373,1,1],[59.977,1,1],[60.581,2,1],[61.161,0,1],[61.463,0,2],[61.765,3,1],[62.067,1,2],[62.659,1,1],[62.949,2,1],[63.251,1,2],[63.553,2,2],[63.855,1,2],[64.157,3,1],[64.459,2,2],[64.76,3,1],[65.968,1,1],[66.27,0,2],[66.572,3,1],[66.873,1,1],[67.477,2,2],[67.779,2,1],[68.069,3,1],[68.36,1,2],[68.661,3,1],[68.963,2,1],[69.265,2,2],[69.567,3,1],[70.171,3,1],[70.751,2,1],[71.053,0,2],[71.657,0,2],[72.26,2,2],[72.562,2,1],[72.864,0,2],[73.166,0,2],[73.468,3,2],[73.77,3,1],[74.072,2,2],[74.374,0,2],[74.977,3,1],[75.581,1,1],[76.185,3,1],[76.475,0,2],[76.765,0,2],[77.067,1,2],[77.369,3,1],[77.671,1,2],[77.973,0,2],[78.576,3,1],[79.157,0,2],[79.459,3,2],[79.761,2,1],[80.364,1,1],[80.968,3,1],[81.27,2,1],[81.572,0,2],[82.175,3,1],[82.477,0,2],[82.779,0,2],[83.081,2,1],[83.383,2,1],[83.685,3,2],[83.987,3,1],[85.171,2,1],[85.473,2,2],[85.775,1,1],[86.378,2,1],[86.68,3,1],[86.982,2,1],[87.586,1,1],[87.888,1,2],[89.397,3,1],[90.604,2,1],[91.185,1,2],[91.487,0,2],[91.788,3,1],[92.392,0,2],[92.694,2,2],[92.996,2,1],[93.298,3,1],[93.6,0,2],[94.203,2,1],[94.784,0,2],[95.086,1,2],[95.388,3,1],[95.991,0,2],[96.282,1,1],[96.572,1,1],[96.874,2,2],[97.176,0,2],[97.477,0,2],[97.779,2,2],[98.081,0,2],[98.383,2,1],[99.567,1,1],[99.869,0,2],[100.171,3,1],[100.473,1,2],[101.065,2,1],[101.355,2,1],[101.657,1,2],[101.959,2,2],[102.261,2,2],[102.563,3,1],[102.864,2,2],[103.166,3,1],[104.374,1,1],[104.676,1,2],[104.977,3,1],[105.279,1,1],[105.883,2,2],[106.185,3,1],[106.475,2,1],[106.765,2,2],[107.067,3,1],[107.369,2,1],[107.973,2,1],[108.577,1,1],[109.157,2,1],[109.459,0,2],[109.761,1,2],[110.063,0,2],[110.666,1,2],[110.968,2,2],[111.27,1,2],[111.572,0,2],[112.477,3,1],[112.779,1,2],[113.081,1,2],[113.383,3,1],[113.964,1,1],[114.567,3,1],[114.869,0,2],[115.171,0,2],[115.473,1,2],[115.775,3,1],[116.077,1,2],[116.378,0,2],[116.982,3,1]],"duration":117.61},"egal-wo-du-grad-bist":{"bpm":152.0,"notes":[[2.81,0,2],[5.968,3,1],[6.165,2,2],[6.362,0,2],[6.757,2,1],[6.954,1,2],[7.152,1,1],[7.349,3,2],[7.546,3,1],[7.941,2,1],[8.359,3,1],[8.557,1,2],[8.754,0,1],[8.951,3,2],[9.149,2,1],[9.543,2,1],[9.961,1,1],[10.159,1,2],[10.356,0,1],[10.553,3,2],[10.751,2,1],[11.146,0,2],[11.54,0,2],[11.958,2,2],[12.353,0,1],[12.748,0,2],[13.142,2,1],[13.34,2,2],[13.537,0,1],[13.746,3,2],[13.955,2,1],[14.35,0,2],[14.745,2,1],[15.163,0,2],[15.557,1,1],[15.952,1,2],[16.347,3,1],[16.544,1,2],[16.742,1,2],[16.939,3,2],[17.136,1,1],[17.531,2,1],[17.949,0,1],[18.344,2,2],[18.762,2,1],[19.156,0,2],[19.551,2,1],[19.946,2,1],[20.155,3,2],[20.364,1,1],[20.759,0,2],[21.153,1,1],[21.548,1,2],[21.943,0,1],[22.361,1,2],[22.756,1,1],[22.953,0,2],[23.15,1,2],[23.545,2,1],[23.94,1,2],[24.358,2,1],[24.555,1,2],[24.752,0,2],[25.147,2,1],[25.96,1,1],[26.355,1,2],[26.552,3,2],[26.749,0,2],[27.144,0,2],[27.562,2,1],[27.759,2,2],[27.957,0,2],[28.154,3,2],[28.352,3,1],[28.746,1,1],[29.164,1,1],[29.362,2,2],[29.559,0,2],[29.756,3,2],[29.954,3,1],[30.348,1,1],[30.766,2,1],[30.964,3,2],[31.161,0,2],[31.556,1,1],[31.951,0,2],[32.345,2,1],[32.74,1,1],[32.949,3,2],[33.158,2,1],[33.576,0,2],[34.76,0,2],[35.155,3,1],[36.142,0,2],[36.339,0,2],[37.152,3,2],[37.547,0,2],[38.359,0,2],[38.754,2,1],[39.149,0,1],[39.346,3,2],[39.544,3,1],[39.938,0,2],[40.356,3,1],[40.751,0,2],[41.146,2,1],[41.54,0,2],[41.958,2,1],[42.353,1,2],[42.748,2,1],[43.143,3,1],[43.537,0,1],[43.955,0,2],[44.35,2,1],[45.163,2,1],[45.36,1,2],[45.558,0,1],[45.755,3,2],[45.952,3,1],[46.347,1,1],[46.742,1,1],[47.16,0,2],[47.554,2,1],[47.949,1,2],[48.344,1,1],[48.739,2,2],[49.157,3,1],[50.956,1,2],[51.548,0,1],[51.943,0,2],[52.14,3,2],[52.338,0,1],[52.733,1,1],[53.15,2,1],[53.545,2,2],[53.963,0,1],[54.358,1,2],[54.753,3,1],[54.95,0,2],[55.147,1,1],[55.345,3,2],[55.542,3,1],[55.96,0,1],[56.355,2,1],[56.75,2,2],[57.144,3,1],[57.562,0,2],[57.957,2,1],[58.154,0,2],[58.352,1,1],[58.549,3,2],[58.746,1,1],[59.164,0,2],[59.559,2,1],[59.954,1,2],[60.349,0,1],[60.743,2,2],[61.161,1,1],[61.359,2,2],[62.148,3,2],[63.553,2,1],[63.948,0,2],[64.342,1,1],[64.737,0,2],[64.946,3,2],[65.155,0,2],[65.55,0,2],[65.945,2,1],[66.142,1,2],[66.339,0,2],[66.548,3,2],[66.757,2,1],[67.152,2,1],[67.547,1,1],[67.744,1,2],[67.942,2,2],[68.151,3,2],[68.36,3,2],[68.754,1,1],[69.149,2,2],[69.544,2,2],[69.962,1,1],[70.356,0,2],[70.751,1,1],[71.146,2,1],[71.564,3,1],[71.959,2,1],[72.353,3,1],[72.748,2,2],[72.945,3,2],[73.143,3,1],[73.561,0,2],[73.956,2,1],[74.153,1,2],[74.35,1,2],[74.548,3,2],[74.745,1,1],[76.347,0,2],[77.531,2,2],[77.926,3,2],[81.154,3,2],[81.943,2,2],[82.338,3,2],[83.987,0,2],[84.776,2,2],[86.75,3,2],[87.957,0,2],[88.549,2,2],[88.747,0,2],[89.559,0,2],[89.954,2,1],[90.349,1,2],[90.744,3,1],[91.162,0,2],[91.556,3,1],[91.951,0,2],[92.346,3,1],[92.764,0,2],[93.158,2,1],[93.553,1,2],[93.948,3,1],[94.343,1,2],[94.761,1,2],[95.155,0,2],[95.55,1,1],[95.945,2,1],[96.363,2,1],[96.758,1,2],[97.152,3,1],[97.547,0,2],[97.965,2,1],[98.36,0,2],[98.754,2,1],[99.544,1,2],[99.741,1,2],[99.939,0,2],[100.357,3,2],[100.751,1,2],[101.146,1,2],[101.541,0,2],[101.959,2,1],[102.354,2,2],[102.748,3,1],[103.143,1,1],[103.352,3,2],[103.561,1,1],[103.956,1,1],[104.35,3,1],[104.548,0,2],[104.745,1,2],[105.163,2,1],[105.558,0,2],[105.953,3,1],[106.347,2,2],[106.742,3,1],[107.16,1,2],[107.555,1,1],[107.95,2,2],[108.344,3,1],[108.739,0,1],[109.157,3,1],[109.552,2,1],[109.749,3,2],[109.946,3,1],[110.341,1,1],[110.759,3,1],[110.957,2,2],[111.154,0,1],[111.351,3,2],[111.549,3,1],[111.943,0,2],[112.361,2,1],[112.559,2,2],[112.756,1,2],[112.953,3,2],[113.151,3,1],[113.546,0,1],[113.964,3,1],[114.161,3,2],[114.358,0,2],[114.556,3,2],[114.753,3,1],[115.148,2,1],[115.542,2,1],[115.74,3,2],[115.937,0,1],[116.146,3,2],[116.355,2,1],[116.75,2,1],[117.145,3,1],[117.342,1,2],[117.539,1,1],[117.737,3,2],[117.934,2,1]],"duration":128.0},"magdalena":{"bpm":117.5,"notes":[[1.509,2,1],[2.02,1,1],[2.276,3,2],[2.531,3,1],[2.786,0,1],[3.042,2,1],[3.297,2,1],[3.553,0,1],[4.063,2,1],[4.319,3,2],[4.574,3,1],[4.818,0,1],[5.062,3,1],[5.317,3,1],[5.573,2,1],[6.084,1,1],[6.339,3,1],[6.594,3,1],[6.85,0,2],[7.105,2,1],[7.361,1,1],[7.616,2,1],[7.872,2,1],[8.382,3,1],[8.638,1,1],[9.149,0,2],[9.404,3,2],[9.66,2,1],[9.903,0,2],[10.147,0,2],[10.658,2,1],[10.913,0,1],[11.169,1,1],[11.424,2,1],[11.68,3,1],[11.935,1,2],[12.19,2,1],[12.446,3,1],[12.701,2,1],[12.957,3,2],[13.468,3,2],[13.723,2,1],[13.978,0,1],[14.234,0,2],[14.489,2,2],[14.745,2,1],[14.988,0,2],[15.232,0,1],[15.488,2,1],[15.743,1,1],[15.999,3,2],[16.254,2,1],[16.509,3,2],[16.765,0,2],[17.02,2,2],[17.276,1,1],[17.531,3,2],[17.786,2,1],[18.042,0,2],[18.297,1,2],[18.808,2,1],[19.052,0,2],[19.296,1,2],[19.551,2,2],[19.807,3,1],[20.062,3,1],[20.317,2,1],[20.573,3,1],[20.828,2,1],[21.084,0,2],[21.339,0,2],[21.595,3,2],[21.85,1,1],[22.105,0,2],[22.616,3,2],[22.872,3,1],[23.127,0,2],[23.382,1,1],[23.638,1,1],[23.893,2,1],[24.149,2,1],[24.915,1,1],[25.159,1,1],[25.403,0,1],[25.658,1,1],[25.913,2,1],[26.169,3,1],[26.935,0,2],[27.191,0,2],[27.446,2,1],[27.701,0,2],[27.957,1,1],[28.212,1,2],[28.468,0,2],[28.979,2,1],[29.234,0,2],[29.489,3,1],[30.0,1,1],[30.244,1,2],[30.488,3,1],[30.999,0,2],[31.254,0,2],[31.509,1,1],[31.765,1,2],[32.02,0,2],[32.276,2,2],[32.531,0,1],[32.787,3,2],[33.042,1,1],[33.553,1,1],[33.808,3,2],[34.064,3,1],[34.307,0,2],[34.807,3,1],[35.062,2,1],[35.318,0,2],[35.573,2,1],[35.828,2,2],[36.084,1,1],[36.339,2,2],[36.595,0,1],[37.105,3,1],[37.361,0,2],[37.616,1,1],[37.86,3,1],[38.104,0,2],[38.359,0,2],[38.615,3,1],[39.126,1,1],[39.892,3,1],[40.658,0,2],[41.169,3,1],[41.935,2,2],[42.191,3,1],[42.701,1,2],[43.212,1,2],[44.211,0,2],[44.722,0,2],[45.232,2,2],[45.743,3,1],[46.254,0,1],[48.298,1,2],[48.808,1,1],[49.319,2,2],[49.83,2,2],[50.085,3,2],[50.341,1,1],[50.852,0,2],[51.85,2,1],[52.361,1,2],[52.872,2,1],[53.383,1,2],[54.404,2,2],[55.403,1,2],[55.914,1,1],[56.424,2,1],[56.935,1,2],[57.446,3,1],[58.212,2,2],[58.468,3,1],[58.979,1,2],[59.466,1,2],[59.722,2,2],[60.488,1,2],[60.999,0,2],[61.51,2,2],[62.02,3,1],[62.531,0,2],[64.575,0,2],[65.086,2,1],[65.596,2,2],[66.107,3,1],[66.363,2,2],[66.618,1,1],[67.617,0,2],[68.104,2,1],[68.615,1,2],[69.126,3,1],[69.637,2,1],[70.658,1,2],[71.68,1,1],[71.935,2,2],[72.191,0,2],[72.702,3,1],[73.213,1,1],[73.468,3,2],[73.723,2,1],[73.979,1,2],[74.234,1,2],[74.49,0,2],[74.745,2,1],[75.0,0,1],[75.5,0,2],[75.743,2,1],[75.999,0,2],[76.254,2,1],[76.51,1,2],[76.765,2,1],[77.021,0,2],[77.276,0,1],[77.787,3,1],[78.042,0,2],[78.298,2,1],[78.553,3,2],[78.809,2,1],[79.064,0,2],[79.319,2,1],[79.575,3,2],[79.83,3,1],[80.074,0,2],[80.318,1,1],[80.573,0,2],[80.829,3,1],[81.34,0,1],[81.85,1,1],[82.106,0,2],[82.361,1,1],[82.617,3,2],[82.872,3,1],[83.127,1,1],[83.383,0,2],[83.638,3,1],[83.894,1,1],[84.138,0,2],[84.381,1,2],[84.637,2,2],[84.892,3,1],[85.148,1,1],[85.403,2,1],[85.914,2,1],[86.936,0,2],[87.702,0,2],[87.957,1,1],[88.213,0,2],[88.468,1,1],[88.712,2,2],[88.956,1,1],[89.466,0,2],[89.977,1,1],[90.744,1,1],[90.999,2,2],[91.254,0,2],[92.021,3,1],[92.276,3,1],[92.532,2,2],[92.787,0,2],[93.042,0,2],[93.53,3,2],[94.041,3,1],[94.552,2,1],[94.807,0,2],[95.062,0,2],[96.084,3,2],[96.34,3,2],[96.595,0,2],[97.106,0,2],[97.617,1,2],[98.128,1,1],[98.615,0,2],[98.871,2,2],[99.126,1,2],[99.381,2,2],[99.892,1,2],[100.148,2,1],[101.169,0,2],[101.68,3,1],[102.191,3,1],[102.957,1,1],[103.213,2,2],[103.468,0,2],[104.234,1,2],[104.49,3,2],[104.745,3,2],[106.278,1,2],[107.021,3,2],[107.276,2,2],[107.532,0,2],[108.298,3,1],[108.553,3,2],[109.32,0,2],[110.318,3,1],[111.34,1,2],[111.595,0,2],[112.361,0,2],[113.383,2,2],[114.405,2,1],[115.171,0,2],[115.426,3,1],[116.169,3,2],[116.425,2,2],[117.447,0,2],[117.957,3,2],[118.468,1,2],[119.234,3,1],[119.745,2,2],[120.512,1,2],[120.767,3,2],[121.022,2,2],[121.51,1,2],[122.021,0,2],[122.532,3,1],[123.298,2,2],[123.553,3,1],[124.064,1,2],[124.552,1,2],[124.807,0,2],[125.574,1,2],[126.084,0,2],[126.595,2,2],[127.106,3,1],[127.617,0,2],[129.66,0,2],[130.171,2,1],[130.682,2,2],[131.193,3,2],[131.437,1,2],[131.68,1,1],[132.191,0,2],[133.19,3,1],[133.7,1,2],[134.211,3,1],[134.722,3,2],[135.744,1,2],[136.51,0,2],[136.766,1,1],[137.021,1,2],[137.276,0,1],[137.787,1,1],[138.298,0,2],[138.809,3,1],[139.575,1,2],[139.831,2,1],[140.341,3,2],[140.829,1,2],[141.084,3,2],[141.34,0,2],[141.595,1,2],[141.851,0,2],[142.362,0,2],[142.872,3,2],[143.383,3,1],[143.894,1,2],[144.893,2,1],[145.914,1,2],[146.425,1,1],[146.936,2,2],[147.447,2,1],[147.958,1,2],[148.468,0,2],[148.956,2,2],[149.467,3,1],[149.978,1,2],[150.489,3,1],[151.023,2,1],[151.533,2,2],[152.044,1,1],[154.064,3,2],[154.32,1,2],[154.575,0,2],[155.55,2,2],[157.338,3,1],[157.594,3,1],[157.849,0,1],[158.105,3,1],[158.36,3,1],[159.126,1,1],[159.637,3,1],[159.904,3,2],[160.705,2,1],[160.961,3,1]],"duration":162.71},"nie-vorbei":{"bpm":86.1,"notes":[[1.765,0,2],[2.125,2,2],[2.844,0,2],[3.204,0,2],[3.901,3,2],[5.317,0,1],[7.047,2,2],[7.384,0,1],[7.732,3,1],[9.474,2,1],[9.822,1,2],[10.17,0,1],[10.867,3,2],[11.215,3,2],[11.564,1,1],[12.26,3,1],[12.608,2,2],[12.957,0,1],[13.677,2,1],[14.373,1,1],[14.721,3,1],[15.07,3,1],[15.766,1,1],[16.463,2,1],[17.16,2,1],[17.856,3,1],[18.204,1,2],[18.553,1,1],[19.249,0,1],[19.946,1,1],[20.643,2,1],[20.991,2,2],[21.339,1,1],[22.036,0,1],[22.384,0,2],[23.081,1,2],[23.429,3,1],[23.777,1,1],[24.126,0,1],[24.474,3,1],[25.182,0,1],[25.542,2,1],[26.587,2,2],[26.935,0,2],[27.283,3,2],[27.632,1,1],[27.98,0,2],[28.328,1,1],[28.677,1,1],[29.025,2,2],[29.373,2,2],[29.722,0,1],[30.07,3,1],[30.418,2,1],[31.115,1,1],[31.463,3,1],[31.811,3,1],[32.508,1,1],[32.856,3,2],[33.205,2,2],[33.901,2,1],[34.249,3,1],[34.598,3,1],[36.339,0,1],[36.688,0,1],[37.036,2,2],[37.384,2,1],[37.732,3,2],[38.081,2,1],[38.777,2,1],[39.474,0,1],[40.171,3,1],[40.519,3,2],[40.867,0,2],[41.564,1,1],[41.912,3,2],[42.26,2,1],[42.957,3,1],[43.305,3,2],[43.654,1,1],[44.35,1,1],[44.698,0,2],[45.047,0,2],[45.395,1,2],[45.743,3,1],[46.092,1,1],[46.44,0,1],[46.788,2,1],[47.485,0,1],[47.833,1,2],[48.53,1,2],[48.878,2,2],[49.226,2,2],[49.575,3,2],[49.923,2,1],[50.271,0,1],[50.62,3,1],[51.676,2,2],[52.036,0,1],[52.384,3,1],[52.733,2,1],[54.126,2,1],[54.822,0,1],[55.519,3,2],[55.867,3,1],[56.216,1,1],[56.912,3,1],[57.26,2,2],[57.609,0,1],[58.329,2,1],[59.025,1,1],[59.373,3,1],[59.722,3,1],[60.418,1,1],[61.115,3,1],[61.812,2,1],[62.508,3,1],[62.856,1,2],[63.205,1,1],[63.901,0,1],[64.598,1,1],[65.295,2,1],[65.643,2,2],[65.991,1,1],[66.339,1,2],[66.688,0,1],[67.048,1,2],[67.408,2,2],[68.127,3,1],[69.521,3,1],[70.891,1,2],[71.239,2,2],[71.587,1,1],[72.284,2,1],[72.98,1,1],[73.677,3,1],[74.025,1,2],[74.374,1,1],[76.463,3,1],[76.812,3,1],[77.16,1,1],[77.508,2,2],[77.857,3,1],[78.553,2,1],[78.901,3,1],[79.25,2,1],[79.946,0,2],[80.295,2,2],[82.036,0,2],[83.429,0,2],[84.822,1,2],[85.171,0,2],[85.519,0,2],[86.564,1,2],[86.912,0,2],[87.261,0,2]],"duration":89.3},"wie-du-tanzt":{"bpm":152.0,"notes":[[1.997,0,2],[2.786,3,2],[4.389,0,2],[5.991,0,2],[6.78,2,2],[8.382,0,2],[9.195,0,2],[9.985,3,2],[10.797,0,2],[12.399,0,2],[13.584,3,2],[14.176,1,2],[14.373,3,2],[14.768,3,2],[15.395,1,2],[16.591,3,2],[16.985,0,2],[17.183,2,1],[17.578,0,2],[17.972,2,2],[18.367,3,1],[18.762,0,2],[20.387,0,2],[20.596,3,2],[21.002,3,2],[21.2,2,2],[21.792,3,2],[21.989,3,1],[22.187,2,2],[22.581,3,2],[22.779,3,2],[23.568,0,1],[24.776,3,1],[25.17,3,1],[25.565,0,1],[25.96,3,1],[26.169,1,2],[26.378,1,1],[26.773,2,1],[27.167,1,1],[27.365,1,2],[27.562,2,1],[27.771,0,2],[27.98,2,1],[28.177,0,2],[28.375,3,1],[28.572,1,2],[28.77,1,1],[29.164,2,1],[29.559,1,1],[29.977,1,1],[30.372,2,1],[30.766,3,1],[31.161,2,1],[31.359,0,2],[31.556,3,1],[31.974,0,1],[32.369,3,1],[32.763,1,1],[33.181,3,1],[33.576,1,1],[33.773,1,2],[33.971,2,1],[34.168,1,2],[34.366,2,1],[34.575,0,2],[34.783,3,1],[34.981,1,2],[35.178,1,1],[35.573,2,1],[35.968,1,1],[36.362,2,1],[37.198,2,2],[37.79,3,2],[38.383,0,2],[38.777,1,2],[39.172,0,2],[39.369,3,2],[39.567,1,2],[39.962,0,2],[40.38,2,1],[40.774,2,2],[40.972,1,2],[41.169,2,2],[41.366,0,2],[41.564,0,2],[41.982,3,1],[42.179,3,2],[42.376,2,2],[42.771,2,1],[42.969,3,2],[43.166,0,2],[43.561,3,1],[43.77,3,2],[43.979,2,2],[44.176,2,1],[44.373,1,1],[44.768,1,1],[45.163,3,1],[45.558,2,1],[45.976,3,1],[46.37,2,1],[46.765,3,1],[47.16,1,1],[47.357,1,2],[47.554,3,1],[47.763,0,2],[47.972,1,2],[48.367,3,1],[48.565,2,2],[48.762,2,1],[49.18,3,1],[49.575,1,2],[49.969,1,1],[50.364,2,1],[50.759,3,1],[50.968,3,1],[51.177,0,2],[51.572,1,2],[51.78,0,2],[51.989,0,2],[52.976,1,2],[53.174,0,2],[53.568,1,2],[53.986,0,2],[54.381,0,2],[56.773,3,1],[57.168,2,2],[57.562,2,1],[57.98,1,2],[58.178,0,2],[58.375,1,2],[58.77,0,2],[59.164,2,2],[59.373,1,2],[59.582,1,2],[59.78,2,2],[59.977,1,2],[60.395,2,2],[60.79,0,2],[61.997,0,2],[63.379,3,1],[64.168,3,2],[64.366,2,1],[64.563,3,2],[64.76,1,2],[65.178,1,1],[65.573,2,1],[65.968,2,2],[66.177,3,2],[66.386,1,2],[66.583,3,1],[66.781,3,2],[67.175,2,2],[67.57,0,1],[67.965,2,1],[68.36,2,1],[68.778,1,1],[69.172,2,2],[69.962,3,1],[70.774,1,1],[71.169,2,1],[71.564,3,1],[71.959,1,1],[72.353,3,1],[72.562,3,2],[72.771,2,1],[73.166,3,1],[73.363,0,2],[73.561,1,2],[73.979,2,1],[74.374,2,1],[74.768,3,1],[75.163,1,1],[75.36,3,2],[75.558,3,1],[75.952,2,1],[76.765,0,2],[77.183,0,2],[77.578,1,2],[78.762,2,1],[78.959,1,2],[79.157,0,2],[79.366,3,2],[79.575,2,1],[79.97,0,2],[80.167,3,2],[80.364,1,2],[80.782,1,1],[81.177,2,1],[81.572,1,1],[81.966,2,1],[82.361,2,1],[82.57,1,2],[82.779,2,2],[83.174,0,1],[83.569,1,2],[83.766,2,2],[83.963,0,2],[84.381,2,1],[84.776,2,1],[85.171,3,1],[85.566,2,1],[85.775,2,2],[85.983,0,1],[86.181,1,2],[86.378,0,2],[86.773,2,1],[87.168,0,1],[87.562,1,1],[87.957,0,2],[88.352,1,2],[88.77,0,2],[89.165,3,1],[89.374,3,2],[90.175,0,2],[90.372,1,2],[91.58,1,2],[91.974,0,2],[92.392,1,2],[95.179,3,2],[95.573,2,2],[95.968,1,1],[96.386,1,2],[96.583,0,2],[96.781,1,2],[97.176,0,2],[97.57,1,2],[97.779,1,2],[97.988,2,1],[98.383,1,2],[98.801,2,1],[100.403,0,2],[101.982,3,1],[102.377,0,1],[102.772,3,1],[103.166,2,1],[103.584,3,1],[103.979,1,1],[104.374,3,1],[104.571,0,2],[104.768,2,1],[105.163,3,1],[105.372,1,2],[105.581,0,1],[105.976,3,1],[106.371,2,1],[106.765,2,1],[107.16,1,1],[107.578,3,1],[107.973,2,1],[108.368,1,1],[108.762,1,1],[109.18,2,1],[109.575,2,1],[109.97,3,1],[110.364,1,1],[110.782,2,1],[110.98,0,2],[111.177,2,1],[111.375,1,2],[111.572,3,1],[111.769,0,2],[111.967,1,1],[112.361,3,1],[112.779,2,1],[113.174,2,1],[113.569,1,1],[113.964,3,1],[114.358,2,1],[114.556,3,1],[115.171,0,2],[115.566,0,2],[115.984,1,2],[117.191,0,2],[117.981,0,2],[119.56,2,2],[121.139,0,2]],"duration":121.7}};
+
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const fmt = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
+  const store = {
+    get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+    set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  };
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- picker + song list ---------- */
+  const picker = $("picker");
+  SONGS.forEach((s, i) => {
+    const m = MAPS[s.id];
+    const lab = document.createElement("label");
+    lab.className = "pick";
+    lab.innerHTML = `<input type="radio" name="song" id="song-${s.id}" value="${s.id}" ${i === 0 ? "checked" : ""}>
+      <span class="pick-title">${s.title}</span><span class="pick-meta">${m ? fmt(m.duration) + " · " + Math.round(m.bpm) + " BPM" : ""}</span>`;
+    picker.appendChild(lab);
+  });
+  const list = $("songList");
+  SONGS.forEach((s) => {
+    const li = document.createElement("li");
+    li.className = "song";
+    li.innerHTML = `<h3>${s.title}</h3><div class="song-body"><p>${s.desc}</p>
+      <div class="song-actions">
+        <button class="btn" type="button" data-play="${s.id}"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></svg>Im Spiel spielen</button>
+        <a class="btn line" href="${SPOTIFY}" target="_blank" rel="noopener">Auf Spotify hören</a>
+      </div></div>`;
+    list.appendChild(li);
+  });
+  list.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-play]");
+    if (!b) return;
+    selectSong(b.dataset.play);
+    $("spiel").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+    setTimeout(() => $("playBtn").focus({ preventScroll: true }), reduceMotion ? 0 : 500);
+  });
+
+  /* ---------- copy mail ---------- */
+  $("copyBtn").addEventListener("click", () => {
+    const addr = "silmachtmusik@gmail.com";
+    const done = () => { $("copyBtn").textContent = "Kopiert"; setTimeout(() => ($("copyBtn").textContent = "Adresse kopieren"), 1800); };
+    const fallback = () => { const r = document.createRange(); r.selectNodeContents($("mail")); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); $("copyBtn").textContent = "Markiert, jetzt kopieren"; };
+    try { navigator.clipboard.writeText(addr).then(done, fallback); } catch (e) { fallback(); }
+  });
+
+  /* ---------- game state ---------- */
+  const canvas = $("canvas"), ctx2d = canvas.getContext("2d"), stage = $("stage");
+  const LANES = 4, KEYS = { KeyD: 0, KeyF: 1, KeyJ: 2, KeyK: 3 }, KEY_LABELS = ["D", "F", "J", "K"];
+  const WIN_PERFECT = 0.065, WIN_GOOD = 0.13, WIN_MISS = 0.16;
+  let W = 0, H = 0, DPR = 1;
+  let audio = null, buffers = new Map(), source = null;
+  let songId = SONGS[0].id, mode = 2;
+  let state = "idle"; // idle | loading | playing | paused | ended
+  let startAt = 0, pausedAt = 0, latency = 0;
+  let notes = [], score = 0, combo = 0, maxCombo = 0, hits = 0, perfects = 0, judged = 0;
+  const flash = [0, 0, 0, 0], pressed = [false, false, false, false];
+  let pops = []; // judgement texts / bursts
+  let attractT0 = performance.now();
+
+  const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  let C = {};
+  const readColors = () => { C = { stage: css("--stage"), slat: css("--stage-slat"), leucht: css("--leucht"), kreide: css("--kreide"), tinte: css("--tinte") }; };
+  readColors();
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", readColors);
+  new MutationObserver(readColors).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+
+  function resize() {
+    const r = stage.getBoundingClientRect();
+    DPR = Math.min(window.devicePixelRatio || 1, 2);
+    W = r.width; H = r.height;
+    canvas.width = Math.round(W * DPR); canvas.height = Math.round(H * DPR);
+    ctx2d.setTransform(DPR, 0, 0, DPR, 0, 0);
+  }
+  new ResizeObserver(resize).observe(stage);
+  resize();
+
+  function selectSong(id) {
+    if (state === "playing" || state === "paused") stopSong();
+    songId = id;
+    const input = $("song-" + id); if (input) input.checked = true;
+    showStart();
+  }
+  picker.addEventListener("change", (e) => { if (e.target.name === "song") selectSong(e.target.value); });
+  document.querySelectorAll('input[name="mode"]').forEach((r) => r.addEventListener("change", () => { mode = +r.value; updateBest(); }));
+
+  const bestKey = () => `sil-best-${songId}-${mode}`;
+  function updateBest() {
+    const b = +store.get(bestKey()) || 0;
+    $("best").textContent = b ? `Dein Rekord: ${b.toLocaleString("de-CH")} Punkte` : "Noch kein Rekord für diesen Song.";
+  }
+  function title() { return SONGS.find((s) => s.id === songId).title; }
+  function showStart() {
+    state = "idle";
+    $("startTitle").textContent = title();
+    $("startPanel").hidden = false; $("pausePanel").hidden = true; $("endPanel").hidden = true; $("pauseBtn").hidden = true;
+    $("err").hidden = true;
+    $("score").textContent = "0"; $("combo").innerHTML = "&nbsp;"; $("progress").style.width = "0";
+    updateBest();
+    attractT0 = performance.now();
+  }
+
+  async function getBuffer(id) {
+    if (buffers.has(id)) return buffers.get(id);
+    const res = await fetch(`audio/${id}.mp3`);
+    if (!res.ok) throw new Error("http " + res.status);
+    const arr = await res.arrayBuffer();
+    const buf = await new Promise((ok, fail) => audio.decodeAudioData(arr, ok, fail));
+    buffers.set(id, buf);
+    return buf;
+  }
+
+  async function startSong() {
+    if (state === "loading") return;
+    if (!audio) { const AC = window.AudioContext || window.webkitAudioContext; audio = new AC(); }
+    if (audio.state === "suspended") await audio.resume();
+    state = "loading";
+    const btn = $("playBtn"); btn.disabled = true; btn.querySelector("span").textContent = "Lädt …"; $("err").hidden = true;
+    let buf;
+    try { buf = await getBuffer(songId); }
+    catch (e) {
+      state = "idle"; btn.disabled = false; btn.querySelector("span").textContent = "Spielen";
+      $("err").textContent = "Der Song konnte nicht geladen werden. Prüf deine Verbindung und versuch es nochmal."; $("err").hidden = false;
+      return;
+    }
+    btn.disabled = false; btn.querySelector("span").textContent = "Spielen";
+    const map = MAPS[songId];
+    notes = map.notes.filter((n) => n[2] <= mode).map((n) => ({ t: n[0], lane: n[1], done: false }));
+    score = combo = maxCombo = hits = perfects = judged = 0; pops = [];
+    latency = (audio.outputLatency || 0) + (audio.baseLatency || 0);
+    source = audio.createBufferSource(); source.buffer = buf; source.connect(audio.destination);
+    startAt = audio.currentTime + 0.6;
+    source.start(startAt);
+    source.onended = () => { if (state === "playing") endSong(); };
+    $("startPanel").hidden = true; $("endPanel").hidden = true; $("pausePanel").hidden = true; $("pauseBtn").hidden = false;
+    state = "playing";
+    stage.focus?.();
+  }
+  function songTime() { return audio.currentTime - startAt - latency; }
+  function pause() {
+    if (state !== "playing") return;
+    audio.suspend(); state = "paused"; $("pausePanel").hidden = false; $("pauseBtn").hidden = true; $("resumeBtn").focus();
+  }
+  function resume() {
+    if (state !== "paused") return;
+    audio.resume(); state = "playing"; $("pausePanel").hidden = true; $("pauseBtn").hidden = false;
+  }
+  function stopSong() {
+    if (source) { source.onended = null; try { source.stop(); } catch (e) {} source = null; }
+    if (audio && audio.state === "suspended") audio.resume();
+  }
+  function endSong() {
+    stopSong(); state = "ended";
+    const total = notes.length || 1;
+    const acc = Math.round((hits / total) * 100);
+    const prev = +store.get(bestKey()) || 0;
+    if (score > prev) store.set(bestKey(), String(score));
+    $("rScore").textContent = score.toLocaleString("de-CH");
+    $("rAcc").textContent = acc + " %";
+    $("rCombo").textContent = maxCombo;
+    $("endTitle").textContent = acc >= 90 ? "Überragend." : acc >= 70 ? "Stark." : acc >= 45 ? "Guter Groove." : "Nochmal?";
+    $("rBest").textContent = score > prev ? (prev ? "Neuer Rekord!" : "Erster Rekord gesetzt.") : `Dein Rekord: ${prev.toLocaleString("de-CH")} Punkte`;
+    $("endPanel").hidden = false; $("pauseBtn").hidden = true; $("progress").style.width = "100%";
+    $("againBtn").focus();
+  }
+
+  $("playBtn").addEventListener("click", startSong);
+  $("againBtn").addEventListener("click", startSong);
+  $("pauseBtn").addEventListener("click", pause);
+  $("resumeBtn").addEventListener("click", resume);
+  $("quitBtn").addEventListener("click", () => { stopSong(); showStart(); });
+  document.addEventListener("visibilitychange", () => { if (document.hidden) pause(); });
+
+  /* ---------- input ---------- */
+  function hit(lane) {
+    flash[lane] = 1;
+    if (state !== "playing") return;
+    const t = songTime();
+    let best = null, bestD = 9;
+    for (const n of notes) {
+      if (n.done || n.lane !== lane) continue;
+      const d = Math.abs(n.t - t);
+      if (n.t - t > WIN_MISS) break;
+      if (d < bestD) { best = n; bestD = d; }
+    }
+    if (!best || bestD > WIN_GOOD) return;
+    best.done = true; judged++; hits++; combo++; maxCombo = Math.max(maxCombo, combo);
+    const perfect = bestD <= WIN_PERFECT;
+    if (perfect) perfects++;
+    score += Math.round((perfect ? 300 : 120) * (1 + Math.min(combo, 50) / 50));
+    pops.push({ lane, text: perfect ? "Perfekt" : "Gut", t: performance.now(), burst: true });
+    hud();
+  }
+  function miss(n) {
+    n.done = true; judged++; combo = 0;
+    pops.push({ lane: n.lane, text: "Daneben", t: performance.now(), burst: false, miss: true });
+    hud();
+  }
+  function hud() {
+    $("score").textContent = score.toLocaleString("de-CH");
+    $("combo").textContent = combo >= 5 ? `${combo}er Combo` : " ";
+  }
+  document.addEventListener("keydown", (e) => {
+    if (e.target instanceof Element && e.target.closest("textarea, input[type=text], input[type=email]")) return;
+    if (e.code in KEYS && (state === "playing")) {
+      e.preventDefault();
+      const l = KEYS[e.code]; if (!pressed[l]) { pressed[l] = true; hit(l); }
+    } else if (e.code === "Escape" || (e.code === "KeyP" && state === "playing")) {
+      if (state === "playing") pause(); else if (state === "paused") resume();
+    }
+  });
+  document.addEventListener("keyup", (e) => { if (e.code in KEYS) pressed[KEYS[e.code]] = false; });
+  canvas.addEventListener("pointerdown", (e) => {
+    const r = canvas.getBoundingClientRect();
+    const lane = Math.max(0, Math.min(LANES - 1, Math.floor(((e.clientX - r.left) / r.width) * LANES)));
+    hit(lane);
+  });
+
+  /* ---------- render ---------- */
+  function rr(x, y, w, h, r) { ctx2d.beginPath(); ctx2d.roundRect ? ctx2d.roundRect(x, y, w, h, r) : ctx2d.rect(x, y, w, h); }
+  function frame(now) {
+    const travel = mode === 1 ? 2.0 : 1.55;
+    const hitY = H - 92;
+    const slat = Math.max(8, W * 0.022);
+    const laneW = (W - slat * (LANES + 1)) / LANES;
+    const laneX = (i) => slat + i * (laneW + slat);
+
+    ctx2d.clearRect(0, 0, W, H);
+    ctx2d.fillStyle = C.stage; ctx2d.fillRect(0, 0, W, H);
+    // slats (the facade)
+    ctx2d.fillStyle = C.slat;
+    for (let i = 0; i <= LANES; i++) {
+      const x = i * (laneW + slat);
+      ctx2d.globalAlpha = .9; ctx2d.fillRect(x, 0, slat, H);
+      ctx2d.globalAlpha = .25; ctx2d.fillRect(x + slat * .62, 0, slat * .18, H);
+    }
+    ctx2d.globalAlpha = 1;
+
+    // lane flashes
+    for (let i = 0; i < LANES; i++) {
+      if (flash[i] > 0.01) {
+        const g = ctx2d.createLinearGradient(0, hitY, 0, hitY - 260);
+        g.addColorStop(0, `rgba(220,245,92,${0.35 * flash[i]})`); g.addColorStop(1, "rgba(220,245,92,0)");
+        ctx2d.fillStyle = g; ctx2d.fillRect(laneX(i), hitY - 260, laneW, 260);
+        flash[i] *= 0.86;
+      }
+    }
+
+    // time
+    let t, alpha = 1;
+    const active = state === "playing" || state === "paused";
+    const map = MAPS[songId];
+    if (active) { t = songTime(); }
+    else { t = reduceMotion ? 22 : ((now - attractT0) / 1000 * 0.8 + 18) % (map.duration - 4); alpha = .5; }
+
+    if (active) $("progress").style.width = Math.max(0, Math.min(100, (t / map.duration) * 100)) + "%";
+
+    // hit line
+    ctx2d.fillStyle = C.kreide; ctx2d.globalAlpha = .9;
+    ctx2d.fillRect(0, hitY - 1.5, W, 3);
+    ctx2d.globalAlpha = 1;
+
+    // key caps
+    ctx2d.font = `700 15px ${getComputedStyle(document.body).fontFamily}`;
+    ctx2d.textAlign = "center"; ctx2d.textBaseline = "middle";
+    for (let i = 0; i < LANES; i++) {
+      const cx = laneX(i) + laneW / 2;
+      ctx2d.globalAlpha = .18 + flash[i] * .5; ctx2d.fillStyle = C.kreide;
+      rr(laneX(i) + 6, hitY + 14, laneW - 12, 48, 12); ctx2d.fill();
+      ctx2d.globalAlpha = .9; ctx2d.fillStyle = C.kreide;
+      ctx2d.fillText(KEY_LABELS[i], cx, hitY + 38);
+    }
+    ctx2d.globalAlpha = 1;
+
+    // notes
+    const src = active ? notes : map.notes.filter((n) => n[2] <= mode).map((n) => ({ t: n[0], lane: n[1], done: false }));
+    const nh = Math.max(16, laneW * 0.2);
+    ctx2d.globalAlpha = alpha;
+    for (const n of src) {
+      const dt = n.t - t;
+      if (dt > travel + 0.1) { if (!active) break; else break; }
+      if (active && !n.done && dt < -WIN_MISS) { miss(n); continue; }
+      if (n.done || dt < -0.2) continue;
+      const y = hitY - (dt / travel) * hitY;
+      ctx2d.fillStyle = C.leucht;
+      rr(laneX(n.lane) + 5, y - nh / 2, laneW - 10, nh, nh / 2); ctx2d.fill();
+    }
+    ctx2d.globalAlpha = 1;
+    // fade notes in under the score
+    const fade = ctx2d.createLinearGradient(0, 0, 0, 90);
+    fade.addColorStop(0, C.stage); fade.addColorStop(1, "rgba(0,0,0,0)");
+    ctx2d.save(); ctx2d.fillStyle = fade; ctx2d.globalAlpha = .95; ctx2d.fillRect(0, 0, W, 90); ctx2d.restore();
+
+    // pops
+    pops = pops.filter((p) => now - p.t < 650);
+    for (const p of pops) {
+      const k = (now - p.t) / 650, cx = laneX(p.lane) + laneW / 2;
+      if (p.burst && !reduceMotion) {
+        ctx2d.strokeStyle = C.leucht; ctx2d.lineWidth = 3 * (1 - k); ctx2d.globalAlpha = 1 - k;
+        ctx2d.beginPath(); ctx2d.arc(cx, hitY, 14 + k * laneW * .45, 0, Math.PI * 2); ctx2d.stroke();
+      }
+      ctx2d.globalAlpha = 1 - k; ctx2d.fillStyle = p.miss ? C.kreide : C.leucht;
+      ctx2d.font = `900 ${Math.round(Math.min(30, laneW * .3))}px "Big Shoulders Display", Impact, sans-serif`;
+      ctx2d.fillText(p.text, cx, hitY - 34 - k * 26);
+    }
+    ctx2d.globalAlpha = 1;
+
+    if (state === "playing" && t > map.duration + 0.3) endSong();
+    requestAnimationFrame(frame);
+  }
+  showStart();
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
