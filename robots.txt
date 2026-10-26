@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.DEINE-DOMAIN.ch/sitemap.xml
+Sitemap: https://silmachtmusik.ch/sitemap.xml
