@@ -227,8 +227,8 @@ section.block { padding-block: 72px; border-top: 2px solid var(--fg); }
 .clip.playing .clip-btn { opacity: 0; }
 .clip.playing:hover .clip-btn, .clip.playing .clip-btn:focus-visible { opacity: .85; }
 .song:first-child { padding-top: 0; }
-.song h3 { font-size: clamp(2.25rem, 3.6vw, 3.25rem); line-height: .95; overflow-wrap: anywhere; }
-.song-head { display: grid; grid-template-columns: clamp(88px, 12vw, 140px) 1fr; gap: 20px; align-items: end; align-self: start; min-width: 0; }
+.song h3 { font-size: clamp(2.25rem, 3.6vw, 3.25rem); line-height: .95; }
+.song-head { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; align-content: start; align-self: start; min-width: 0; }
 .lyrics { border-top: 1px solid var(--line); padding-top: 12px; }
 .lyrics summary {
   cursor: pointer; font-weight: 700; font-size: var(--step--1); list-style: none; display: inline-flex; align-items: center; gap: 8px;
@@ -241,7 +241,7 @@ section.block { padding-block: 72px; border-top: 2px solid var(--fg); }
 .song-meta { display: grid; grid-template-columns: max-content 1fr; gap: 2px 16px; margin: 0; font-size: var(--step--1); font-variant-numeric: tabular-nums; }
 .song-meta dt { color: var(--fg-soft); }
 .song-meta dd { margin: 0; font-weight: 500; }
-.song-head img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 10px; display: block; max-width: 100%; }
+.song-head img { width: min(100%, 180px); height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 10px; display: block; max-width: 100%; }
 .song-body { display: flex; flex-direction: column; gap: 16px; min-width: 0; max-width: 62ch; }
 .song-actions { display: flex; gap: 10px; flex-wrap: wrap; }
 .btn {
